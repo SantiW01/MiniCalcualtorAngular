@@ -1,0 +1,18 @@
+<form action="">
+  <input
+    type="number"
+    [ngModel]="getNumber1()"
+    (ngModelChange)="setNumber1(numberOne.valueAsNumber)"
+    #numberOne
+    name="number1"
+  />
+  <input
+    type="number"
+    [ngModel]="getNumber2()"
+    (ngModelChange)="setNumber2(numberTwo.valueAsNumber)"
+    #numberTwo
+    name="number2"
+  />
+  <button type="submit" value="Add" (click)="Add()"></button>
+</form>
+{{ getResult() }}

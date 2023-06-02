@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 @Component({
   selector: 'calculator',
-  templateUrl: './calculator.componenet.html',
+  templateUrl: './calculator.component.html',
   styleUrls: ['./calcualtor.component.css'],
 })
-export class CalculatorComponent {
+export default class CalculatorComponent {
   private number1: number = 0;
   private number2: number = 0;
-  private operator: string = '';
-
+  private result: number = 0;
   setNumber1(number1: number): void {
     this.number1 = number1;
   }
@@ -25,11 +24,15 @@ export class CalculatorComponent {
     return this.number2;
   }
 
-  setOperator(operator: string): void {
-    this.operator = operator;
+  setResult(result: number): void {
+    this.result = result;
   }
 
-  getOperator(): string {
-    return this.operator;
+  getResult(): number {
+    return this.result;
+  }
+
+  Add(): void {
+    this.setResult(this.getNumber1() + this.getNumber2());
   }
 }
