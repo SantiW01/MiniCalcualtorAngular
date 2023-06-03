@@ -35,4 +35,16 @@ export default class CalculatorComponent {
   Add(): void {
     this.setResult(this.getNumber1() + this.getNumber2());
   }
+
+  Subtract(): void {
+    this.setResult(this.getNumber1() - this.getNumber2());
+  }
+
+  Times(): void {
+    this.setResult(this.getNumber1() * this.getNumber2());
+  }
+
+  Divide(): void {
+    this.setResult(this.getNumber1() / this.getNumber2());
+  }
 }
